@@ -102,7 +102,7 @@ const LandingPage = () => {
             </Link>
 
             <Link to="/signup" className="w-full sm:w-auto">
-              <button className="w-full text-xs sm:text-sm md:text-base px-3 sm:px-2 sm:w-auto py-2 bg-[#fca001]  border border-indigo-800  text-white rounded-lg transition-transform hover:scale-105 ">
+              <button className="w-full text-xs sm:text-sm md:text-base px-3 sm:px-2 sm:w-auto py-2 bg-[#2639cc]  border border-indigo-800  text-white rounded-lg transition-transform hover:scale-105 ">
                 Sign up
               </button>
             </Link>
@@ -112,23 +112,24 @@ const LandingPage = () => {
 
       <section
         id="home"
-        className="min-h-screen flex items-center justify-center pt-25 bg-linear-to-br from-[#EEF2FF] to-[#FCE7F3]"
+        className="min-h-screen flex items-center justify-center pt-25 bg-linear-to-br from-[#eef2ffb2] to-[#fce7f3b9]"
       >
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 px-4">
           {/* LEFT CONTENT */}
-          <div className="max-w-2xl">
-            <p className="text-sm font-medium text-[#7e4cd4fb] mb-4 text-center md:text-left border border-[#674cd4a0] rounded-full w-max px-5 py-1 mx-auto md:mx-0">
-              Built for Content Creators
-            </p>
 
+          <div className="max-w-2xl">
+            <p className="text-xs border border-[#4c5cd4] rounded-2xl py-2 px-6 mb-5 hover:border-[#0084ff] inline-block">
+              Keep track of your brand deals, content, and payments — without
+              the chaos
+            </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-center md:text-left">
-              Manage your brand deals, content, and deadlines — <br />
+              Manage every collaboration, deadline, and payment — <br />
               <span className="text-[#2D3678]"> all in one place</span>
             </h1>
 
             <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto md:mx-0 text-center md:text-left">
-              Track collaborations, stay organized, and never miss a payment
-              again.
+              CreatorsHub helps you stay organized across brand deals, content
+              planning, and payments so nothing slips through.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-12">
@@ -141,11 +142,20 @@ const LandingPage = () => {
               </button>
             </div>
 
-            <div className="flex justify-center md:justify-start items-center gap-3 mb-10">
+            <div className="flex justify-center md:justify-start items-center gap-2 mb-10">
               <div className="flex -space-x-3">
-                <img src="user1.jpg" className="w-8 h-8 rounded-full border" />
-                <img src="user2.jpg" className="w-8 h-8 rounded-full border" />
-                <img src="user3.jpg" className="w-8 h-8 rounded-full border" />
+                <img
+                  src="user1.jpg"
+                  className="w-8 h-8 rounded-full border border-amber-400"
+                />
+                <img
+                  src="user2.jpg"
+                  className="w-8 h-8 rounded-full border border-amber-400"
+                />
+                <img
+                  src="user3.jpg"
+                  className="w-8 h-8 rounded-full border border-amber-400"
+                />
               </div>
               <span className="text-sm text-gray-500">
                 Trusted by 500+ creators
@@ -154,11 +164,11 @@ const LandingPage = () => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="flex justify-center w-full md:w-auto">
+          <div className="flex justify-center w-full md:w-auto md:p-0 sm:p-10 pb-5">
             <img
-              src="thatstheone.png"
+              src="thatstheonemain.png"
               alt="dashboard preview"
-              className="w-full max-w-md sm:max-w-lg md:max-w-xl rounded-t-full rounded-b-xl shadow-2xl"
+              className="w-full max-w-3xl sm:max-w-lg md:max-w-xl rounded-xl  shadow-2xl transition-transform hover:scale-105"
             />
           </div>
         </div>
@@ -172,8 +182,8 @@ const LandingPage = () => {
               Everything you need to run your creator business
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Manage collaborations, content, payments, and workflows — all in
-              one system.
+              From tracking deals to managing content and payments, everything
+              is organized in one system.
             </p>
           </div>
 
@@ -182,107 +192,92 @@ const LandingPage = () => {
             {[
               {
                 title: "Brand Deal Management",
-                desc: "Track offers, negotiations, and deliverables.",
-                icon: "🤝",
+                desc: "Track offers, negotiations, and deliverables in one place",
+                icon: <i className="fa-regular fa-handshake"></i>,
               },
               {
                 title: "Content Planner",
-                desc: "Plan and schedule your content calendar.",
-                icon: "📅",
+                desc: "Plan, schedule, and organize your content calendar",
+                icon: <i className="fa-regular fa-calendar-days"></i>,
               },
               {
                 title: "Deadline Tracking",
-                desc: "Stay ahead with smart reminders.",
-                icon: "⏰",
+                desc: "Stay on top of deliverables with clear timelines",
+                icon: <i className="fa-regular fa-alarm-clock"></i>,
               },
               {
                 title: "Payment Tracker",
-                desc: "Monitor invoices and payment status.",
-                icon: "💰",
+                desc: "Monitor invoices, pending payments, and earnings",
+                icon: <i className="fa-solid fa-hand-holding-dollar"></i>,
               },
               {
                 title: "Collaboration Hub",
-                desc: "Manage multiple brands in one place.",
-                icon: "📂",
+                desc: "Manage multiple brands without losing context",
+                icon: <i className="fa-solid fa-users"></i>,
               },
               {
                 title: "Task Manager",
-                desc: "Break work into actionable tasks.",
-                icon: "✅",
+                desc: "Break down work into clear, actionable steps",
+                icon: <i className="fa-solid fa-list-check "></i>,
               },
             ].map((f, i) => (
               <div
                 key={i}
-                className="bg-linear-to-br from-[#EEF2FF] to-[#FCE7F3] p-6 rounded-2xl shadow-sm hover:shadow-md transition-transform hover:scale-105"
+                className="bg-linear-to-br from-[#EEF2FF] to-[#FCE7F3] p-1 rounded-2xl shadow-sm hover:shadow-md transition-transform hover:scale-105 min-h-50"
               >
-                <div className="text-3xl mb-4">{f.icon}</div>
-                <h3 className="font-semibold text-lg mb-2">{f.title}</h3>
-                <p className="text-gray-600 text-sm">{f.desc}</p>
+                <div className="bg-white/55 rounded-2xl h-50 p-6 text-center gap-4">
+                  <div className="text-3xl mb-4 flex justify-center items-center gap-3 text-[#4c5cd4] pt-5 ">
+                    {f.icon}
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2 text-[#2D3678]">
+                    {f.title}
+                  </h3>
+
+                  <p className="text-gray-600 text-sm">{f.desc}</p>
+                </div>
               </div>
             ))}
           </div>
 
-          {/* FEATURE CATEGORIES */}
-          <div className="grid md:grid-cols-3 gap-10 mb-20">
-            {/* WORKFLOW */}
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Workflow</h3>
-              <ul className="space-y-2 text-gray-600 text-sm">
-                <li>✔ Content planning system</li>
-                <li>✔ Task & checklist management</li>
-                <li>✔ Campaign tracking</li>
-                <li>✔ Smart reminders</li>
-              </ul>
-            </div>
-
-            {/* COLLABORATIONS */}
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Collaborations</h3>
-              <ul className="space-y-2 text-gray-600 text-sm">
-                <li>✔ Brand deal tracking</li>
-                <li>✔ Negotiation notes</li>
-                <li>✔ Deliverables management</li>
-                <li>✔ Communication logs</li>
-              </ul>
-            </div>
-
-            {/* FINANCE */}
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Finance</h3>
-              <ul className="space-y-2 text-gray-600 text-sm">
-                <li>✔ Payment tracking</li>
-                <li>✔ Invoice management</li>
-                <li>✔ Earnings overview</li>
-                <li>✔ Due payment alerts</li>
-              </ul>
-            </div>
-          </div>
-
           {/* BIG FEATURE SHOWCASE */}
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div className="grid md:grid-cols-2 md:gap-10 sm:gap-2 items-center">
             {/* TEXT */}
-            <div>
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
-                Built for real creator workflows
+            <div className="mt-0">
+              <h3 className="md:text-5xl sm:text-3xl font-bold mb-4 md:pb-10 sm:pb-0">
+                Built around how creators actually work
               </h3>
               <p className="text-gray-600 mb-6">
-                CreatorsHub replaces messy spreadsheets, scattered chats, and
-                missed deadlines with one clean, powerful system.
+                Instead of switching between chats, notes, and spreadsheets,
+                CreatorsHub brings everything into one structured workflow you
+                can rely on.
               </p>
 
               <ul className="space-y-3 text-gray-700">
-                <li>✔ One dashboard for everything</li>
-                <li>✔ Clear visibility on deals & payments</li>
-                <li>✔ Better organization, less stress</li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> See all
+                  your brand deals in one dashboard
+                </li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Keep
+                  track of deadlines and deliverables clearly
+                </li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Monitor
+                  payments without manual tracking
+                </li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Stay
+                  organized as your workload grows
+                </li>
               </ul>
             </div>
 
             {/* IMAGE */}
-            <div className="flex justify-center">
+            <div className="flex justify-center p-15 md:pt-5 sm:pt-0">
               <img
-                src="thatstheone.png"
+                src="thatstheonecolab.png"
                 alt="dashboard preview"
-                className="w-full max-w-md sm:max-w-lg md:max-w-xl rounded-t-full rounded-b-xl shadow-2xl"
+                className="w-full max-w-md sm:max-w-2xl md:max-w-xl rounded-t-full rounded-b-xl shadow-2xl "
               />
             </div>
           </div>
@@ -297,11 +292,10 @@ const LandingPage = () => {
           {/* HEADER */}
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-              How CreatorsHub works
+              A simple way to manage your workflow
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              A simple system to manage your entire creator workflow without
-              chaos.
+              Set up your system once, and manage everything without confusion.
             </p>
           </div>
 
@@ -310,45 +304,46 @@ const LandingPage = () => {
             {[
               {
                 step: "01",
-                title: "Add Collaborations",
-                desc: "Create and manage your brand deals in one place.",
+                title: "Add your collaborations",
+                desc: "Store brand deals, requirements, and details in one place",
               },
               {
                 step: "02",
-                title: "Plan Content",
-                desc: "Organize posts, campaigns, and deliverables.",
+                title: "Plan your content",
+                desc: "Organize posts, campaigns, and timelines clearly",
               },
               {
                 step: "03",
-                title: "Track Progress",
-                desc: "Stay updated with deadlines and tasks.",
+                title: "Track progress",
+                desc: "Stay updated on deadlines and task completion",
               },
               {
                 step: "04",
-                title: "Get Paid",
-                desc: "Monitor payments and never miss invoices.",
+                title: "Manage payments",
+                desc: "Keep track of invoices and know what's pending",
               },
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-white/35 p-5 sm:p-6 rounded-2xl shadow-sm text-center
-                     hover:shadow-md  min-h-45 flex flex-col justify-between transition-transform hover:scale-105"
+                className="bg-linear-to-br from-[#EEF2FF] to-[#FCE7F3] p-1  rounded-2xl shadow-sm text-center
+                     hover:shadow-lg  min-h-45 flex flex-col justify-between transition-transform hover:scale-105"
               >
-                <div>
-                  <div className="text-sm font-semibold text-[#6C63FF] mb-2">
-                    {item.step}
+                <div className="bg-white/75 rounded-2xl h-45 p-6 sm:p-6">
+                  <div>
+                    <div className="text-sm font-semibold text-[#6C63FF] mb-2">
+                      {item.step}
+                    </div>
+
+                    <h3 className="text-sm sm:text-base md:text-lg font-semibold mb-2">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-gray-600 text-xs sm:text-sm">
+                      {item.desc}
+                    </p>
                   </div>
-
-                  <h3 className="text-sm sm:text-base md:text-lg font-semibold mb-2">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-gray-600 text-xs sm:text-sm">
-                    {item.desc}
-                  </p>
+                  <div className="mt-5 h-1 w-10 mx-auto bg-[#6C63FF] rounded-full"></div>
                 </div>
-
-                <div className="mt-4 h-1 w-10 mx-auto bg-[#6C63FF] rounded-full"></div>
               </div>
             ))}
           </div>
@@ -358,117 +353,161 @@ const LandingPage = () => {
             {/* TEXT */}
             <div>
               <h3 className="text-2xl sm:text-3xl font-bold mb-4">
-                From chaos to clarity
+                Stay in control without extra effort
               </h3>
               <p className="text-gray-600 mb-6">
-                Instead of juggling spreadsheets, emails, and chats —
-                CreatorsHub gives you a structured workflow to manage everything
-                in one place.
+                With everything structured in one place, you don't have to rely
+                on memory, scattered notes, or constant follow-ups.
               </p>
 
               <ul className="space-y-3 text-gray-700 text-sm sm:text-base">
-                <li>✔ Clear step-by-step workflow</li>
-                <li>✔ Better visibility on deals & payments</li>
-                <li>✔ Organized content planning system</li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Clear
+                  step-by-step workflow
+                </li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Better
+                  visibility on deals & payments
+                </li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Organized
+                  content planning system
+                </li>
               </ul>
             </div>
 
             {/* IMAGE */}
             <div className="flex justify-center">
               <img
-                src="thatstheone.png"
+                src="thatsthesecond.png"
                 alt="workflow preview"
-                className="w-3/5 max-w-md sm:max-w-lg md:max-w-xl rounded-2xl shadow-2xl"
+                className="w-3/5 max-w-md sm:max-w-lg md:max-w-xl rounded-3xl shadow-2xl"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section id="pricing" className="py-20 px-4 sm:px-6 ">
+      <section id="pricing" className="py-20 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           {/* HEADER */}
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-              Simple, transparent pricing
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#2D3678]">
+              Simple pricing that grows with you
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Start free. Upgrade when your creator business grows.
             </p>
           </div>
 
-          {/* PRICING CARDS */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* PRICING CARDS - Updated for Horizontal Scroll on Mobile */}
+          <div className="flex overflow-x-auto pb-8 gap-6 snap-x snap-mandatory sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-x-visible sm:pb-0 ">
             {/* FREE PLAN */}
-            <div className="bg-white p-6 sm:p-8 rounded-2xl border shadow-sm flex flex-col">
+            <div className="min-w-55 shrink-0 snap-center bg-white p-4 sm:p-6 rounded-2xl border shadow-sm flex flex-col sm:min-w-45 mt-5 transition-transform hover:scale-105">
               <h3 className="text-lg font-semibold mb-2">Free</h3>
               <p className="text-gray-600 text-sm mb-6">
                 Perfect for getting started
               </p>
-
               <div className="text-3xl font-bold mb-6">
                 ₹0 <span className="text-sm text-gray-500">/month</span>
               </div>
-
               <ul className="space-y-3 text-gray-600 text-sm mb-8">
-                <li>✔ Manage up to 3 collaborations</li>
-                <li>✔ Basic content planning</li>
-                <li>✔ Task tracking</li>
-                <li>✔ Limited reminders</li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Manage up
+                  to 5 collaborations
+                </li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Basic
+                  content planning
+                </li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Task
+                  tracking
+                </li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Limited
+                  reminders
+                </li>
               </ul>
-
-              <button className="mt-auto border border-gray-300 py-2 rounded-lg text-sm hover:bg-gray-100">
+              <button className="mt-auto border border-gray-300 py-2 rounded-2xl text-sm hover:bg-gray-100">
                 Get Started
               </button>
             </div>
 
             {/* PRO PLAN (HIGHLIGHTED) */}
-            <div className="bg-white p-6 sm:p-8 rounded-2xl border-2 border-[#6C63FF] shadow-md flex flex-col relative">
-              {/* BADGE */}
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#6C63FF] text-white text-xs px-3 py-1 rounded-full">
+            <div className="min-w-55 shrink-0 snap-center bg-white p-4 sm:p-6 rounded-2xl border-2 border-[#6C63FF] shadow-md flex flex-col relative sm:min-w-45 mt-5  transition-transform hover:scale-105">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#6C63FF] text-white text-md px-6 py-1 rounded-full whitespace-nowrap ">
                 Most Popular
               </span>
-
               <h3 className="text-lg font-semibold mb-2">Pro</h3>
-              <p className="text-gray-600 text-sm mb-6">For serious creators</p>
-
+              <p className="text-gray-600 text-sm mb-6">
+                For creators managing consistent work
+              </p>
               <div className="text-3xl font-bold mb-6">
                 ₹499 <span className="text-sm text-gray-500">/month</span>
               </div>
-
               <ul className="space-y-3 text-gray-600 text-sm mb-8">
-                <li>✔ Unlimited collaborations</li>
-                <li>✔ Advanced content planner</li>
-                <li>✔ Smart reminders & deadlines</li>
-                <li>✔ Payment tracking</li>
-                <li>✔ Priority support</li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Unlimited
+                  collaborations
+                </li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Advanced
+                  content planner
+                </li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Smart
+                  reminders & deadlines
+                </li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Payment
+                  tracking
+                </li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Priority
+                  support
+                </li>
               </ul>
-
-              <button className="mt-auto bg-[#6C63FF] text-white py-2 rounded-lg text-sm hover:opacity-90">
+              <button className="mt-auto bg-[#6C63FF] text-white py-2 rounded-2xl text-sm hover:opacity-90">
                 Start Free Trial
               </button>
             </div>
 
             {/* BUSINESS PLAN */}
-            <div className="bg-white p-6 sm:p-8 rounded-2xl border shadow-sm flex flex-col">
+            <div className="min-w-55 flex shrink-0 snap-center bg-white p-4 sm:p-6 rounded-2xl border shadow-sm flex-col sm:min-w-45 mt-5  transition-transform hover:scale-105">
               <h3 className="text-lg font-semibold mb-2">Business</h3>
               <p className="text-gray-600 text-sm mb-6">For teams & agencies</p>
-
               <div className="text-3xl font-bold mb-6">
                 ₹999 <span className="text-sm text-gray-500">/month</span>
               </div>
-
               <ul className="space-y-3 text-gray-600 text-sm mb-8">
-                <li>✔ Team collaboration tools</li>
-                <li>✔ Multi-user access</li>
-                <li>✔ Advanced analytics</li>
-                <li>✔ Dedicated support</li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Team
+                  collaboration tools
+                </li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i>{" "}
+                  Multi-user access
+                </li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Advanced
+                  analytics
+                </li>
+                <li>
+                  <i className="fa-solid fa-check text-[#6366F1]"></i> Dedicated
+                  support
+                </li>
               </ul>
-
-              <button className="mt-auto border border-gray-300 py-2 rounded-lg text-sm hover:bg-gray-100">
+              <button className="mt-auto border border-gray-300 py-2 rounded-2xl text-sm hover:bg-gray-100">
                 Contact Sales
               </button>
             </div>
+          </div>
+          <div className="text-center mt-10 text-gray-600">
+            <p>
+              Designed to save time, reduce missed payments, and keep your
+              workflow clear as you scale
+            </p>
           </div>
         </div>
       </section>
@@ -478,11 +517,10 @@ const LandingPage = () => {
           {/* HEADER */}
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-              Loved by creators worldwide
+              Creators using CreatorsHub
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              See how creators are managing their workflow better with
-              CreatorsHub.
+              See how creators are managing their workflow more clearly.
             </p>
           </div>
 
@@ -492,50 +530,63 @@ const LandingPage = () => {
               {
                 name: "Aarav Sharma",
                 role: "YouTuber",
-                text: "Managing brand deals used to be chaos. Now everything is structured and easy to track.",
+                text: "I can finally see all my brand deals in one place instead of jumping between chats and notes.",
+                image: "user1.jpg",
               },
               {
                 name: "Riya Patel",
                 role: "Instagram Creator",
-                text: "I finally stopped missing deadlines. This tool actually keeps me organized.",
+                text: "Deadlines are much easier to track now. I don't feel like I'm missing things anymore.",
+                image: "user2.jpg",
               },
               {
                 name: "Karan Mehta",
                 role: "Content Strategist",
-                text: "The payment tracking alone saved me hours every week.",
+                text: "The payment tracking makes a big difference. I know exactly what's pending.",
+                image: "user3.jpg",
               },
               {
                 name: "Neha Kapoor",
                 role: "Influencer",
-                text: "Simple, clean, and exactly what creators need. No unnecessary complexity.",
+                text: "It's simple, clean, and fits how I already work. its an amazing tool",
+                image: "user2.jpg",
               },
               {
                 name: "Aditya Verma",
                 role: "Freelancer",
                 text: "I manage multiple clients now without losing track of anything.",
+                image: "user3.jpg",
               },
               {
                 name: "Simran Kaur",
                 role: "Lifestyle Creator",
                 text: "Feels like this was built specifically for my workflow.",
+                image: "user1.jpg",
               },
             ].map((t, i) => (
               <div
                 key={i}
-                className="bg-white/65 p-6 rounded-2xl shadow-sm hover:shadow-md transition flex flex-col justify-between"
+                className="bg-linear-to-br from-[#EEF2FF] to-[#FCE7F3] p-1 rounded-2xl shadow-sm hover:shadow-md flex flex-col justify-between transition-transform hover:scale-105"
               >
-                <p className="text-gray-600 text-sm sm:text-base mb-6">
-                  “{t.text}”
-                </p>
+                <div className="bg-white p-6 rounded-2xl">
+                  <p className="text-gray-600 text-sm sm:text-base mb-6">
+                    “{t.text}”
+                  </p>
 
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#6C63FF] text-white flex items-center justify-center text-sm font-semibold">
-                    {t.name.charAt(0)}
-                  </div>
+                  <div className="flex items-center gap-3">
+                    {/* Dynamic background image using template literals */}
+                    <div
+                      className="w-10 h-10 rounded-full bg-cover bg-center text-white flex items-center justify-center text-sm font-semibold"
+                      style={{ backgroundImage: `url(${t.image})` }}
+                    >
+                      {/* Fallback text only if image fails to load or isn't present */}
+                      {!t.image && t.name.charAt(0)}
+                    </div>
 
-                  <div>
-                    <p className="text-sm font-semibold">{t.name}</p>
-                    <p className="text-xs text-gray-500">{t.role}</p>
+                    <div>
+                      <p className="text-sm font-semibold">{t.name}</p>
+                      <p className="text-xs text-gray-500">{t.role}</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -544,15 +595,15 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <footer className="bg-[#4c5cd455] border-t py-16 px-4 sm:px-6">
+      <footer className="bg-linear-to-br from-[#cfd9fb] to-[#FCE7F3] border-t py-16 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           {/* TOP CTA */}
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-              Ready to organize your creator workflow?
+              Start organizing your creator workflow today
             </h2>
             <p className="text-gray-600 mb-6">
-              Start managing your collaborations, content, and payments today.
+              Set up your system once and manage everything from one place.
             </p>
 
             <button className="px-6 py-3 bg-[#6C63FF] text-white rounded-xl font-semibold hover:opacity-90">
@@ -568,8 +619,8 @@ const LandingPage = () => {
                 CreatorsHub
               </h3>
               <p className="text-gray-600">
-                A simple system to manage your creator business — from deals to
-                payments.
+                CreatorsHub helps creators manage brand deals, content, and
+                payments in one organized system.
               </p>
             </div>
 
@@ -617,7 +668,7 @@ const LandingPage = () => {
           </div>
 
           {/* BOTTOM BAR */}
-          <div className="border-t pt-6 text-center text-xs sm:text-sm text-gray-500">
+          <div className="border-t border-[#001088] pt-6 text-center text-xs sm:text-sm text-gray-500">
             © {new Date().getFullYear()} CreatorsHub. All rights reserved.
           </div>
         </div>

@@ -75,7 +75,7 @@ text-[#4C5BD4] transition-all duration-500 rounded-r-full top-55 h-12"
         </div>
 
         {/* Hero */}
-        <div className="hidden md:flex flex-1 bg-linear-to-br from-[#4c5cd4a0] to-[#ff7970c0] relative overflow-hidden items-center justify-center">
+        <div className="hidden md:flex flex-1 bg-linear-to-br from-[#90a9fd] to-[#faafd9] relative overflow-hidden items-center justify-center">
           <div className="absolute flex flex-col items-center p-10 text-white text-center">
             <h2 className="text-3xl font-bold">Join Us.</h2>
             <p className="opacity-90 text-sm mt-2">
@@ -142,8 +142,8 @@ focus:border-[#4C5BD4] focus:ring-2 focus:ring-[#4C5BD4]/20 rounded-xl px-4 mt-1
               </div>
               <button
                 type="submit"
-                className="w-full h-12 bg-[#FF7A70]
-hover:bg-[#E8665C] rounded-xl font-bold text-white shadow-lg mt-2 hover:scale-105 transition-transform"
+                className="w-full h-12 bg-[#2639cc] 
+hover:bg-[#2639cc6f]  rounded-xl font-bold text-white shadow-lg mt-2 hover:scale-105 transition-transform"
               >
                 SIGN UP
               </button>

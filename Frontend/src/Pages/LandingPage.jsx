@@ -574,7 +574,7 @@ const LandingPage = () => {
                   </p>
 
                   <div className="flex items-center gap-3">
-                    {/* Dynamic background image using template literals */}
+                    {/* Dynamic background image  */}
                     <div
                       className="w-10 h-10 rounded-full bg-cover bg-center text-white flex items-center justify-center text-sm font-semibold"
                       style={{ backgroundImage: `url(${t.image})` }}
@@ -595,7 +595,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <footer className="bg-linear-to-br from-[#cfd9fb] to-[#FCE7F3] border-t py-16 px-4 sm:px-6">
+      <footer className="bg-linear-to-br from-[#cfd9fb] to-[#FCE7F3]  py-16 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           {/* TOP CTA */}
           <div className="text-center mb-12">

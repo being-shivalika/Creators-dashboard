@@ -75,7 +75,7 @@ text-[#4C5BD4] transition-all duration-500 rounded-r-full top-55 h-12"
         </div>
 
         {/* Hero */}
-        <div className="hidden md:flex flex-1 bg-linear-to-br from-[#90a9fd] to-[#faafd9] relative overflow-hidden items-center justify-center">
+        <div className="hidden md:flex flex-1 bg-linear-to-br from-[#90a9fd] to-[#e5affa7a] relative overflow-hidden items-center justify-center">
           <div className="absolute flex flex-col items-center p-10 text-white text-center">
             <h2 className="text-3xl font-bold">Join Us.</h2>
             <p className="opacity-90 text-sm mt-2">
@@ -94,7 +94,7 @@ text-[#4C5BD4] transition-all duration-500 rounded-r-full top-55 h-12"
           onSubmit={SubmitRegiter}
           className="w-full md:w-100 lg:w-112.5 bg-white"
         >
-          <div className="w-full p-4 md:p-12 flex flex-col justify-center">
+          <div className="w-full p-8 md:p-12 flex flex-col justify-center">
             <h1 className="text-2xl font-bold mb-5 text-center text-[#2D2F5B]">
               Create Account
             </h1>
